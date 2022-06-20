@@ -13,12 +13,16 @@ public class BasePage {
             wait = new WebDriverWait(driver, ofSeconds(15));
     }
 
-    public void click(WebElement element) {
+    public static void click(WebElement element) {
         element.click();
     }
 
     public void writeText(WebElement element, String word) {
         element.sendKeys(word);
+    }
+
+    public static String readText(WebElement element) {
+        return element.getText();
     }
 
     public void waitVisibility(WebElement element) {
