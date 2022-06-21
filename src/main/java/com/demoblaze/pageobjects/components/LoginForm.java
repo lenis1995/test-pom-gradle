@@ -46,5 +46,9 @@ public class LoginForm extends BasePage {
         click(closeLoginModalButton);
     }
 
-    public void
+    public void fulfillLoginForm(String username, String password) {
+        setUsername(username);
+        setPassword(password);
+        clickOnSubmitLoginForm();
+    }
 }
